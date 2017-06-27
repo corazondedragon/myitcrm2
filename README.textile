@@ -1,4 +1,3 @@
-!http://myitcrm.com/images/logo.png!
 
 h2. Build Status: !https://secure.travis-ci.org/MyITCRM/myitcrm2.png?branch=master(Build Status)!:http://travis-ci.org/MyITCRM/myitcrm2
 
@@ -20,9 +19,6 @@ MyITCRM2 Features (Current and Planned):
     * Supported Payment Types: PayPal, Cheque, Direct Deposit, Cash/COD
     * Detailed Reporting.
 
-
-Check out http://myitcrm.com for more details
-and the current version of MyIT CRM.
 
 MyITCRM2 is a Open Source and Free Web Program written in Ruby/Rails. It's released under the GNU GPL3 Software License.
 
