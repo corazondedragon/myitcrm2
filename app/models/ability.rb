@@ -1,7 +1,12 @@
 class Ability
 	include CanCan::Ability
+
 	def initialize(user)
-    ## Here you can define custom aliases
+#!/usr/bin/env ruby
+ require 'logger'
+log = Logger.new('/home/purge/www/integrated/log/ability_rb.txt')
+
+## Here you can define custom aliases
     #alias_action(:clients, :to => :access_clients)
     alias_action(:index, :show, :to => :read)
     #alias_action(:employees, :to => :access_employees)
@@ -22,10 +27,21 @@ class Ability
 	      #can [:read, :home], Page, :private => false
       end
     else
+time=Time.new
+
+log.debug time.to_s 
+log.debug user.id.to_s + " " + user.username + " " + user.role_id.to_s
+	
     user.role.permissions.each do |permission|
-          can permission.action.to_sym, permission.subject_class.constantize
+        log.debug permission.action.to_sym.to_s + " " + permission.subject_class.to_s
+	if permission.action.to_sym.to_s == "edit_profile" and permission.subject_class.to_s == "User"
+		#log.debug "can create edit new index read building"
+		#can [:create, :new, :edit, :index, :read, :update, :destroy, :show], Building
+	end 
+	can permission.action.to_sym, permission.subject_class.constantize
       end
-			#can do |action, subject_class, subject|
+			
+#can do |action, subject_class, subject|
 			#	user.role.permissions.find_all_by_action(aliases_for_action(action)).any? do |permission|
 			#		permission.subject_class == subject_class.to_s &&
 			#				(subject.nil? || permission.subject_id.nil? || permission.subject_id == subject.id)
