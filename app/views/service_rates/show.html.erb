@@ -1,14 +1,11 @@
-
 <div id="sidebar_left">
-  <%= module_header %>
   <div class="module">
     <ul>
       <% if can? :read, @products %><li class="delete"><%= link_to (t "global.delete"), @service_rate, :confirm => 'Are you sure?', :method => :delete %></li> <% end %>
       <% if can? :edit, @products %><li class="edit"><%= link_to (t "global.edit"), edit_service_rate_path(@service_rate) %></li> <% end %>
-      <li class="exit"><%= link_to (t "global.exit"), service_rates_path %></li>
     </ul>
   </div>
-<%= render 'layouts/left_sidebar_modules' %>
+<%#= render 'layouts/left_sidebar_modules' %>
 </div>
 <div id="center_col" class="no_right_sidebar">
 <div id="ddtabs1" class="basictab" >
