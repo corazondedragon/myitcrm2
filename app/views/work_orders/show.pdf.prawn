@@ -88,11 +88,11 @@ pdf.move_down(30)
 #Customers Signature required.
 pdf.bounding_box([30,pdf.cursor],:width => 500 ) do
   pdf.pad_top(15) { pdf.text "Job Completion Sign off", :size => 12, :align => :center }
-  pdf.pad_top(5) { pdf.text "This section is required to be signed by both Client and the Repairer before leaving the work site.\n
-    By signing this form, you both acknowledge that the work detailed out in this work order form has been carried out in a Safe and Professional manor.", :size => 8, :align => :center }
+  pdf.pad_top(5) { pdf.text "This section is required to be signed by both Client and the Technician before leaving the work site.\n
+    By signing this form, you both acknowledge that the work detailed out in this workorder form has been carried out in a safe and professional manner.", :size => 8, :align => :center }
   pdf.table([[ "Whom","Names & Signatures" ],
-            [ "Client"," Name:____________________Signed by____________________ dated _____/_____/_____" ],
-            [ "Repairer"," Name:____________________Signed by____________________ dated _____/_____/_____" ]],
+            [ "Client"," Name (print): __________________ Signature: ___________________ Date: ______________" ],
+            [ "Technician"," Name (print): __________________ Signature: ___________________ Date: ______________" ]],
           :cell_style => { :overflow => :shrink_to_fit, :size => 9, :align => :left, :height => 25 },
           :column_widths => {0 => 100, 1 => 400})
 end

@@ -1,3 +1,4 @@
+<%= help_button('work_orders') %>
 <div class="row-fluid">
   <div class="span10">
     <div class="tabbable"> <!-- Only required for left/right tabs -->
@@ -9,11 +10,18 @@
       <div class="tab-content">
         <div class="tab-pane active">
           <%= simple_form_for [@user, @work_order], :html => {:class => "form-horizontal"} do |f| %>
-              <%= f.error_notification %>
+	      <%= f.error_notification %>
               <%= f.input :subject, :label => (t "workorder.subject"), :input_html => {:class => "span3"} %>
               <%= f.association :priority_list, :label => (t "workorder.priority"), :include_blank => false %>
               <%= markdown_hint %>
               <%= f.input :description, :label => (t "workorder.details"), :input_html => {:class => "input-block-level", :rows => "10"} %>
+
+	      <%= f.input :purchase_order, :label => (t "workorder.purchase_order"), :input_html => {:class => "span3"} %>
+	      <%= f.input :instructions, :label => (t "workorder.instructions"), :input_html => {:class => "span3"} %>
+	      <%= f.input :building, :label => (t "workorder.building"), :as => :select, :collection => Building.where("user_id = ?", @user_id_for_new_workorder), :value_method => :name %>
+	      <%= f.input :contact, :label => (t "workorder.contact"), :input_html => {:class => "span3"} %>
+	      <%= f.input :job_number, :label => (t "workorder.job_number"), :input_html => {:class => "span3"} %>
+	      <%= f.input :invoice_number, :label => (t "workorder.invoice_number"), :input_html => {:class => "span3"} %>
               <%= f.input :edited_by, :as => :hidden, :input_html => { :value => current_user.username } %>
               <%= f.input :user_id, :as => :hidden, :input_html => { :value => params[:user_id] } %>
               <%= f.input :created_by, :as => :hidden, :input_html => { :value => current_user.username } %>

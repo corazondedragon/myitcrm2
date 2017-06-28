@@ -21,7 +21,7 @@
               <%= render :partial => "assign" %>
           <% else %>
                   <span class="input-xlarge uneditable-input">
-                    <% if @work_order.assigned_to_username.empty? %>
+                    <% if @work_order.assigned_to_username.blank? %>
                         <%= t("workorder.not_assigned_message") %>
                     <% else %>
                      <%= @work_order.assigned_to_username %>

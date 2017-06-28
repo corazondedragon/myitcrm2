@@ -24,20 +24,34 @@
              <%= f.input :description, :label => (t "workorder.details"), :input_html => { :class => "input-block-level", :rows => "10"} %>
 
 
+              <%= f.input :purchase_order, :label => (t "workorder.purchase_order"), :input_html => {:class => "span3"} %>
+              <%= f.input :instructions, :label => (t "workorder.instructions"), :input_html => {:class => "span3"} %>
+	      <%= f.input :building, :label => (t "workorder.building"), :as => :select, :collection => Building.where("user_id = ?", @work_order.user_id), :value_method => :name %>
+
+              <%= f.input :contact, :label => (t "workorder.contact"), :input_html => {:class => "span3"} %>
+
+	      <% if current_user.role_id == 2 %>
+		 <%= f.input :technical_notes, :label => (t "workorder.technical_notes"), :input_html => {:class => "span3"} %>
+	      <% end %>
+              <%= f.input :job_number, :label => (t "workorder.job_number"), :input_html => {:class => "span3"} %>
+              <%= f.input :invoice_number, :label => (t "workorder.invoice_number"), :input_html => {:class => "span3"} %>
+
+
              <div class="form-actions">
+
                <%= f.submit nil, :class => "btn btn-primary" %>
                <%= link_to t("global.cancel"), work_order_path, :class => "btn" %>
              </div>
       <% end %>
-          </div>
+    </div><!-- close resolution div-->
+</div><!--close tab content -->
+</div><!--close tababble-->
+</div><!--close span10 -->
 
-</div>
-</div>
-</div>
 <!--EOF WO Edit Form-->
 <!--SOF Sidebar-->
 <div class="span2">
-  <div><p><a href="#close" role="button" class="btn btn-success btn-large btn-block" data-toggle="modal">Mark as Completed</a></p></div>
+  <div><p><a href="#close" role="button" class="btn btn-success btn-large btn-block" data-toggle="modal"><%= t("global.mark_as_completed") %></a></p></div>
 
           <!-- Modal -->
           <div id="close" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -52,6 +66,7 @@
   <p><%= link_to t("global.close"), close_path, :class => "btn btn-success btn-large btn-block", :confirm => (t "workorder.message_close_confirmation"), :method => :put  %></p>
   <p><%= link_to (t "global.delete"), work_order_path, :class => "btn btn-danger btn-large btn-block" , :confirm => t("alert.destroy"), :method => :delete %></p>
   <%= menu_button t("global.exit"), work_orders_path, " icon-arrow-left icon-white" %>
-</div>
-</div>
-</div>
+</div><!--close span2 -->
+
+<!--</div> commented this one because it appears that there was one too many close divs-->
+</div><!--close row fluid -->
