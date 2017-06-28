@@ -17,7 +17,9 @@
 
 class PagesController < ApplicationController
   skip_authorize_resource
-  #before_filter :find_page, only: [:show]
+  before_filter :find_page, only: [:show, :edit, :update, :destroy]
+# GET /invoices
+# GET /invoices.xml
   def index
     @pages = Page.all
 
@@ -27,14 +29,18 @@ class PagesController < ApplicationController
     end
   end
 
+  # GET /invoices/1
+  # GET /invoices/1.xml
   def show
-    @page = Page.find_by_permalink!(params[:id])
   end
 
+  # GET /invoices/new
+  # GET /invoices/new.xml
   def new
     @title = "Creating New Page"
     @page = Page.new
 
+    #@invoice_line = InvoiceLine
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,14 +48,16 @@ class PagesController < ApplicationController
     end
   end
 
+  # GET /invoices/1/edit
   def edit
     @title = "Edit Page"
-    @page = Page.find_by_permalink!(params[:id])
   end
 
+  # POST /invoices
+  # POST /invoices.xml
   def create
     @page = Page.new
-    if can? :manage, Page
+    if can? :manage, WorkOrder
       @page.user_id = current_user.id
       @page.permalink = params[:permalink] if current_user.employee?
 
@@ -69,8 +77,10 @@ class PagesController < ApplicationController
     end
   end
 
+  # PUT /invoices/1
+  # PUT /invoices/1.xml
   def update
-    @page = Page.find_by_permalink!(params[:id])
+
     respond_to do |format|
       if @page.update_attributes(params[:page])
         format.html { redirect_to(@page, :notice => 'Page was successfully updated.') }
@@ -82,8 +92,9 @@ class PagesController < ApplicationController
     end
   end
 
+  # DELETE /invoices/1
+  # DELETE /invoices/1.xml
   def destroy
-    @page = Page.find_by_permalink!(params[:id])
     @page.destroy
 
     respond_to do |format|
@@ -97,5 +108,11 @@ class PagesController < ApplicationController
   def find_page
     @page = Page.find_by_permalink!(params[:id])
   end
-
+  def home
+    if params[:permalink]
+      @page = Page.find_by_permalink(params[:id])
+    else
+      @page = Page.first
+    end
+  end
 end

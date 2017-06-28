@@ -19,6 +19,7 @@ class WorkOrdersController < ApplicationController
   before_filter :login_required # User must be logged in first
   authorize_resource # Used by CanCan to restrict controller access
   helper_method :sort_column, :sort_direction # Used for sorting columns
+  #before_filter :check_for_mobile
 
   def index
     @title = t "workorder.t_workorders"
@@ -51,13 +52,19 @@ class WorkOrdersController < ApplicationController
 
   def new
     @work_order = WorkOrder.new
+    #i'm using this @user_id_for_new_workorder variable because the id from @client doesnt appear to be reliable in the view
+    #the following is the default user id, normally if it were a regular user then we should use the current_user.id, otherwise it 
+    #might be a technician logging in and creating a work order under another customers account.
+    @user_id_for_new_workorder = current_user.id 
     if can? :create, WorkOrder
       if params[:user_id].present? and current_user.client
         @client = User.find(current_user.id)
+	@user_id_for_new_workorder = @client.id
         @title = (t "workorder.creating_wo_for")+@client.name.camelcase
       else
         if params[:user_id].present? and current_user.employee
           @client = User.find(params[:user_id])
+	  @user_id_for_new_workorder = @client.id
           @title = (t "workorder.creating_wo_for")+@client.name.camelcase
         end
       end
@@ -77,22 +84,43 @@ class WorkOrdersController < ApplicationController
   end
 
   def create
+
+    #!/usr/bin/env ruby
+    require 'logger'
+    log = Logger.new('/home/purge/www/integrated/log/workorder.txt')
+
     @title = t "workorder.t_workorders"
     @work_order = WorkOrder.new
-    if can? :create, WorkOrder
-      @work_order.user_id = params[:user_id] if current_user.employee?
+    @work_order.attributes = params[:work_order]
+
+    #why this if statement was here, i have no idea.
+    #if can? :create, WorkOrder
+      log.debug "can create work order"
+      log.debug "emp id:"
+      log.debug current_user.employee.to_s
+      log.debug "client id:"
+      log.debug current_user.client.to_s
+      log.debug "user id:"
+      log.debug params[:work_order][:user_id]
+
+      @work_order.user_id = params[:work_order][:user_id] if current_user.employee?
       @work_order.user_id = current_user.id if current_user.client?
+
       @work_order.created_at = Time.now
       @work_order.status_id = 1 # Applies a status of "NEW" by default
       @work_order.closed = 0 # Work Order is not "closed" by default
       @work_order.created_by = current_user.username
-    end
-    @work_order.attributes = params[:work_order]
+    #end
+
     respond_to do |format|
       if @work_order.save
-        format.html { redirect_to @work_order, notice: 'Work Order was successfully created.' }
+	  if Rails.configuration.UserMailer.active
+	  	UserMailer.service_notification(@work_order, current_user).deliver
+	  end
+          format.html { redirect_to @work_order, notice: 'Work Order was successfully created.' }
       else
-        redirect_to(:back)
+	  log.debug "save failed"
+          format.html { redirect_to(:back)}
       end
     end
   end
@@ -119,6 +147,17 @@ class WorkOrdersController < ApplicationController
     else
       respond_to do |format|
         if @work_order.update_attributes(params[:work_order])
+
+          if Rails.configuration.UserMailer.active
+		if @work_order.status_id == "6"
+			#6 means closed
+			@wo_user = User.find_by_id(@work_order.user_id)
+			UserMailer.closed_notification(@work_order, current_user, @wo_user).deliver
+		else
+                	UserMailer.update_service_notification(@work_order, current_user).deliver
+		end
+          end
+
           flash[:notice] = 'Work Order was successfully updated.'
           format.html { redirect_to(@work_order) }
           format.xml { head :ok }
@@ -134,23 +173,28 @@ class WorkOrdersController < ApplicationController
     @title = (t "workorder.t_workorders") + ' #' + params[:id].to_s
     @work_order = WorkOrder.find(params[:id])
     #@work_order.edited_by = current_user.username
-    #@work_order.closed_by = current_user.username
+    ##@work_order.closed_by = current_user.username
     #@work_order.dynamic_attributes = [:status_id, :resolution, :assigned_to_username, :closed] if can? :manage, WorkOrder
     #invoicing_enabled = true
+
     if @work_order.assigned_to_id.blank?
-      redirect_to(@work_order)
-      flash[:alert] = "Work Order needs to be assigned to an employee first before closing."
-      respond_to do |format|
-        if @work_order.update_attributes(params[:work_order])
-          flash[:notice] = 'Work Order was successfully closed.'
-          format.html { redirect_to(@work_order) }
-          format.xml { head :ok }
-        else
-          format.html { render :action => "close" }
-          format.xml { render :xml => @work_order.errors, :status => :unprocessable_entity }
-        end
-      end
+	redirect_to(@work_order)
+	flash[:alert] = "Work Order needs to be assigned to an employee first before closing."
+    else
+    	respond_to do |format|
+ 	    if @work_order.update_attributes(params[:work_order])
+ 	          flash[:notice] = 'Work Order was successfully closed.'
+ 	          format.html { redirect_to(@work_order) }
+ 	          format.xml { head :ok }
+ 	    else
+ 	          format.html { render :action => "close" }
+ 	          format.xml { render :xml => @work_order.errors, :status => :unprocessable_entity }
+ 	    end
+
+ 	end
+
     end
+
   end
 
   def assign

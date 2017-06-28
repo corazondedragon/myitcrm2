@@ -66,7 +66,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         flash[:notice] = t "user.flash_new_success"
-        format.html { redirect_to(@user) }
+        #format.html { redirect_to(@user) }
+	format.html { render :action => "show" }
         format.xml { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "register"}  if not logged_in?
@@ -104,10 +105,13 @@ class UsersController < ApplicationController
 
   def destroy
     @title = t "user.t_delete_user"
+    @user = User.find(params[:id])
+
+
     @user.destroy
     respond_to do |format|
       flash[:notice] = t "user.flash_delete_user"
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to(clients_url) }
     end
   end
 

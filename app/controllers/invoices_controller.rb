@@ -37,6 +37,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.pdf  # show.pdf.prawn
       format.xml { render :xml => @invoice }
     end
   end
