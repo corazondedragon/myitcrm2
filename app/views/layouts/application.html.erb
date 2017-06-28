@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<%= Setting::meta_tags %>"/>
 </head>
@@ -34,7 +35,7 @@
 
 <div id="footer">
   <div class="container">
-    <p class="muted credit" style="text-align: center">Powered by <a href="http://myitcrm.com">MyIT CRM</a>&copy; 2010 - <%= Date.today.year %> - <%= Setting::version %> - Glen Vanderhel </p>
+    <p class="muted credit" style="text-align: center">Powered by MyIT CRM &copy; 2010 - <%= Date.today.year %> - <%= Setting::version %> - Glen Vanderhel </p>
   </div>
 </div>
 </div>
