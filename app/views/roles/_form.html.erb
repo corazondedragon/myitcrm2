@@ -53,6 +53,14 @@
               <legend>Suppliers</legend>
               <%= f.association :permissions, :as => :check_boxes, :label => "", :collection => Permission.where("subject_class = ?", "Supplier") %>
             </fieldset>
+            <fieldset>
+              <legend>Buildings</legend>
+              <%= f.association :permissions, :as => :check_boxes, :label => "", :collection => Permission.where("subject_class = ?", "Building") %>
+            </fieldset>
+            <fieldset>
+              <legend>Company</legend>
+              <%= f.association :permissions, :as => :check_boxes, :label => "", :collection => Permission.where("subject_class = ?", "Company") %>
+            </fieldset>
             <div class="form-actions">
               <%= f.submit nil, :class => "btn btn-primary" %>
               <%= link_to t("global.cancel"), roles_path, :class => "btn" %>
