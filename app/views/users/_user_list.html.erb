@@ -16,7 +16,7 @@
         <th><%= t "user.number" %></th>
         <th><%= sortable "name", (t "user.name") %></th>
         <th><%= (t "user.active_wo") %></th>
-        <th><%= sortable "name",(t "user.username") %></th>
+        <th><%= t "user.username" %></th>
         <th><%= t "global.phone" %></th>
         <th><%= t "global.mobile" %></th>
         <th align="center"><%= t "supplier.actions" %></th>
@@ -37,11 +37,29 @@
             <td><%= user.phone %></td>
             <td><%= user.mobile %></td>
             <td>
-              <a class="btn btn-small" href="<%= new_user_work_order_path(:user_id => user.id) %>"><i class="icon-plus"></i><%= t("navbar.new_work_order") if can? :create, WorkOrder if user.client? %>
-              </a>
-              <a class="btn btn-small" href="<%= new_user_invoice_path(:user_id => user.id) %>"><i class="icon-list-alt"></i><%= t('invoice.create') if can? :create, Invoice %>
-              </a>
+	      <% if can? :create, WorkOrder and user.client? %>
+              	<a class="btn btn-small" href="<%= new_user_work_order_path(:user_id => user.id) %>"><i class="icon-plus"></i><%= t("navbar.new_work_order") %></a>
+	      <% end %>
 
+              <% if can? :create, Invoice %>
+              	<a class="btn btn-small" href="<%= new_user_invoice_path(:user_id => user.id) %>"><i class="icon-plus"></i><%= t("navbar.new_invoice") if can? :create, Invoice %></a>
+	      <% end %>
+
+	      <% if can? :read, User %>
+	      	<a class="btn btn-small" href="<%= new_user_building_path(:user_id => user.id) %>"><i class="icon-plus"></i><%= t("navbar.new_building") if can? :read, User %></a>
+	      <% end %>
+
+		<a class="btn btn-small" href="<%= user_buildings_path(:user_id => user.id) %>"><i class="icon-list-alt"></i><%= t("navbar.building_list") %></a>
+
+	<% if can? :manage, User %>
+		<a class="btn btn-small" href="<%= edit_user_path(:id => user.id) %>"><i class="icon-plus"></i><%= t("global.edit") %></a>
+	<% end %>
+
+      <% if can? :manage, User %>
+        <%= link_to (t "global.delete"), user, :class => "btn btn-small", :confirm => 'Are you sure?', :method => :delete %>
+      <% end %>
+
+	   </td>
           </tr>
       <% end %>
       </tbody>

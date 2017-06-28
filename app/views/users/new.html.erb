@@ -13,6 +13,7 @@
         <h4 class="offset4"><%= t("global.required") %></h4>
         <%= f.input :username, :label => (t "user.username") %>
         <%= f.input :name, :hint =>(t "user.name_eg"), :label =>(t "user.name") %>
+	<%= f.input :company_name, :label => (t "user.company_name") %>
         <%= f.input :password, :required => true %>
         <%= f.input :password_confirmation, :label => (t "user.password_confirmation"), :required => true %>
         <%= f.input :email, :label => (t "global.email") %>

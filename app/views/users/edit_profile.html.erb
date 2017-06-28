@@ -1,19 +1,4 @@
-<div id="sidebar_left">
-  <%= module_header %>
-  <div class="module">
-    <ul>
-      <% if current_user.client %>
-      <li class="delete"><%= link_to (t ("user.cancel_account_button")),@user, :confirm =>(t ('user.msg.cancel_account')), :href => '#' %></li>
-     <% end %>
-      <li class="exit"><%= link_to (t "global.exit"), root_url %></li>
-      <% if can? :manage, User %>
-        <li class="delete"><%= link_to (t "global.delete"), @user, :confirm => 'Are you sure?', :method => :delete %></li>
-      <% end %>
-    </ul>
-  </div>
-   <%= render 'layouts/left_sidebar_modules' %>
-  </div>
-
+<!--commented the next block because it isnt working 
 <div id=center_col>
  <div id="ddtabs1" class="basictab">
   <ul>
@@ -23,21 +8,25 @@
         <li><a href="#<%= t "users.tab.permissions" %>" rel="tab3"><%= t "users.tab.permissions" %></a></li>
     <% end %>
   </ul>
-</div>
+</div>-->
+<div class="row-fluid">
 
-<div class="tabcontainer">
-  <div id="tab1" class="tabcontent">
+<div class="span10">
+<div class="tabbable">
+  <div class="tabcontent">
+	 <div class="tab-pane active" id="resolution">
       <%= simple_form_for(@user) do |f| %>
         <%= f.error_notification %>
               <%= f.input :username ,:input_html => {:autocomplete => 'off'}, :label => (t "user.username") %>
               <%= f.input :name , :label =>(t "user.name_eg") %>
+	      <%= f.input :company_name, :label => (t "user.company_name") %>
               <%= f.input :phone, :input_html => {:size => 30}, :label => (t "global.phone") %>
               <%= f.input :password,:input_html => {:autocomplete => 'off'} %>
               <%= f.input :password_confirmation, :input_html => {:autocomplete => 'off'}, :label => (t "user.password_confirmation")%>
               <%= f.input :email, :label => (t "global.email") %>
               <div class="center"><%= f.button :submit  %></div>
-  </div>
-  <div id="tab2" class="tabcontent">
+    
+
     <%= f.error_notification %>
               <%= f.input :address, :input_html => {:rows => 5}, :label => (t "global.address") %>
               <%= f.input :city, :input_html => {:size => 30}, :label => (t "global.city") %>
@@ -49,18 +38,36 @@
               <%= hidden_field_tag "user[edited_at]", Time.now %>
               <%= hidden_field_tag "user[edited_by]", current_user.username %>
              <div class="center"><%= f.button :submit  %></div>
-  </div>
-  <% if can? :manage, User %>
-  <div id="tab3" class="tabcontent">
-    <%= f.error_notification %>
-    <%= f.association :role %>
+  	<% if can? :manage, User %>
+    	  <%= f.error_notification %>
+    	  <%= f.association :role %>
           <%= f.input :employee, :as => :radio_buttons, :hint => (t "user.hint.employed" ),  :label => (t "user.employed")   %>
           <%= f.input :client, :as => :radio_buttons, :hint => (t "user.hint.client" ),:label => (t "user.client")  %>
           <%= f.input :workorder_assignability, :as => :radio_buttons, :hint => (t "user.hint.assignable" ),:label => (t "user.assignable") %>
 
           <div class="center"><%= f.button :submit  %></div>
+	<% end %>
+ 	<% end %>
+	 </div>
   </div>
-      <% end %>
-      <% end %>
+      
+
 </div>
+</div>
+</div>
+
+<div class="span2">
+    
+      <% if current_user.client %>
+      <%= link_to (t ("user.cancel_account_button")),@user, :class => "btn btn-large btn-inverse btn-block", :confirm =>(t ('user.msg.cancel_account')), :href => '#' %>
+     <% end %>
+      <%= link_to (t "global.exit"), root_url, :class => "btn btn-large btn-inverse btn-block" %>
+      <% if can? :manage, User %>
+        <%= link_to (t "global.delete"), @user, :class => "btn btn-large btn-inverse btn-block", :confirm => 'Are you sure?', :method => :delete %>
+      <% end %>
+    
+   <%# commented the next line because it wasnt really working %>
+   <%#= render 'layouts/left_sidebar_modules' %>
+</div>
+
 </div>
