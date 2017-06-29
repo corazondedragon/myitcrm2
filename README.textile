@@ -1,13 +1,13 @@
 
 h2. Build Status: !https://secure.travis-ci.org/MyITCRM/myitcrm2.png?branch=master(Build Status)!:http://travis-ci.org/MyITCRM/myitcrm2
 
-h1. Welcome to MyIT CRM2 - The Next Stage!
+h1. Welcome to MyIT CRM3 - The Next Stage!
 
 
-h2. What is MyIT CRM2?
+h2. What is MyIT CRM3?
 
-MyIT CRM2 is a Customer Relationship Management Tool, written for the IT Community and businesses who repair computers.
-Whilst MyIT CRM2 is based around IT Repair businesses, it can easily be adapted to any business that needs to schedule and create Work Orders to
+MyIT CRM3 is a Customer Relationship Management Tool, written for the IT Community and businesses who repair computers.
+Whilst MyIT CRM3 is based around IT Repair businesses, it can easily be adapted to any business that needs to schedule and create Work Orders to
 carry out repairs.
 
 MyITCRM2 Features (Current and Planned):
@@ -19,8 +19,9 @@ MyITCRM2 Features (Current and Planned):
     * Supported Payment Types: PayPal, Cheque, Direct Deposit, Cash/COD
     * Detailed Reporting.
 
+If you are interested in this product for setup, please contact me and I will help you set up the program for your business.
 
-MyITCRM2 is a Open Source and Free Web Program written in Ruby/Rails. It's released under the GNU GPL3 Software License.
+MyITCRM3 is a Open Source and Free Web Program written in Ruby/Rails. It's released under the GNU GPL3 Software License.
 
 If you like this program, please visit our website and help support it by making a donation (any amount) to help the ongoing development of MyIT CRM.
 
