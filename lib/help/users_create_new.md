@@ -1,4 +1,4 @@
-## Create a New User
+### Create a New User
 
 To create a New user, You simply fill in all the relevant information for the new user.
 
