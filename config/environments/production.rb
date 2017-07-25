@@ -1,6 +1,15 @@
 MyITCRM2::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+
+  #exception notifier:
+  config.middleware.use ExceptionNotifier,
+	:email_prefix => "Error 500",
+	:sender_address => %{"Exception Notifier" <noreply@ii-inc.ca>},
+	:exception_recipients => %w{andrewdegenhardt@yahoo.ca}
+
+  Time::DATE_FORMATS[:invoice_date] = "%B %d, %Y"
+
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -46,6 +55,7 @@ MyITCRM2::Application.configure do
 
 	  # Don't fallback to assets pipeline if a precompiled asset is missed
 	  config.assets.compile = false
+
 
 	  # Generate digests for assets URLs
 	  config.assets.digest = true
@@ -94,4 +104,21 @@ MyITCRM2::Application.configure do
 	  # Log the query plan for queries taking more than this (works
 	  # with SQLite, MySQL, and PostgreSQL)
 	  #config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+
+	#action mailer configuration:
+	config.action_mailer.delivery_method = :smtp
+	config.action_mailer.smtp_settings = {
+		address:	'localhost',
+		domain:		'westmount',
+		enable_starttls_auto:	true }
+
+
+	# Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+ 	# config.assets.precompile += %w( search.js )
+	#config.assets.precompile += %w[bootstrap_and_overrides.css jquery.mobile.custom.js jquery.mobile.custom.min.js jquery.mobile.custom.structure.css jquery.mobile.custom.structure.min.css jquery.mobile.custom.theme.css jquery.mobile.custom.theme.min.css]A
+
+ 
+
+
 end
