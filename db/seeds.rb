@@ -50,6 +50,39 @@ Supplier.create({
                     :date_created => Time.now,
                     :active => true},
                 :without_protection => true)
+                
+
+# create default record for the Company
+Company.create({
+      :business_name => 'business_name',
+      :business_slogan => 'business_slogan',
+      :business_phone => 'business_phone',
+      :business_toll_free => 'business_toll_free',
+      :business_fax => 'business_fax',
+      :business_mobile => 'business_mobile',
+      :business_email => 'business_email',
+      :technician_email => 'technician_email',
+      :no_reply_email => 'no_reply_email',
+      :accountant_email => 'accountant_email',
+      :service_email => 'service_email',
+      :business_address => 'business_address',
+      :business_city => 'business_city',
+      :business_state => 'business_state',
+      :business_zip_code => 'business_zip_code',
+      :business_country => 'Canada',
+      :business_number => 'business_number',
+      :meta_tags => 'meta_tags',
+      :tax_type => 'tax_type',
+      :tax_rate => 'tax_rate',
+      :logout_limit => true,
+      :idle_time => '100',
+      :version => '2.0.0',
+      :default_invoice_note => 'Thankyou for your support and Business. All work is Guaranteed for up to 14 days from date of completion.',
+      :default_invoice_terms => 'default_invoice_terms'},
+	:without_protection => true)
+
+      
+      
 
 # Adding Some default Permissions to get you started and assigning them to the default Admin account created above.
 #
@@ -66,6 +99,7 @@ Permission.create({:name => 'Manage Roles', :action => 'manage', :subject_class 
 Permission.create({:name => 'Manage Permissions', :action => 'manage', :subject_class => 'Permission'}, :without_protection => true)
 Permission.create({:name => 'Manage Service Rates', :action => 'manage', :subject_class => 'ServiceRate'}, :without_protection => true)
 Permission.create({:name => 'Manage Suppliers', :action => 'manage', :subject_class => 'Supplier'}, :without_protection => true)
+Permission.create({:name => 'Manage Company', :action => 'manage', :subject_class => 'Company'}, :without_protection => true)
 
 Permittable.create({:role_id => '1', :permission_id => '1'}, :without_protection => true)
 Permittable.create({:role_id => '1', :permission_id => '2'}, :without_protection => true)

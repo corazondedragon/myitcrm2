@@ -11,7 +11,46 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123020937) do
+ActiveRecord::Schema.define(:version => 20170605005401) do
+
+  create_table "buildings", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "address"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "business_name"
+    t.string   "business_slogan"
+    t.string   "business_phone"
+    t.string   "business_toll_free"
+    t.string   "business_fax"
+    t.string   "business_mobile"
+    t.string   "business_email"
+    t.string   "technician_email"
+    t.string   "no_reply_email"
+    t.string   "accountant_email"
+    t.string   "service_email"
+    t.string   "business_address"
+    t.string   "business_city"
+    t.string   "business_state"
+    t.string   "business_zip_code"
+    t.string   "business_country"
+    t.string   "business_number"
+    t.string   "meta_tags"
+    t.string   "tax_type"
+    t.decimal  "tax_rate",              :precision => 10, :scale => 0
+    t.boolean  "logout_limit"
+    t.integer  "idle_time"
+    t.string   "version"
+    t.string   "default_invoice_note"
+    t.string   "default_invoice_terms"
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
+  end
 
   create_table "invoices", :force => true do |t|
     t.integer  "user_id"
@@ -256,6 +295,7 @@ ActiveRecord::Schema.define(:version => 20121123020937) do
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
     t.string   "created_by"
+    t.string   "company_name"
   end
 
   create_table "work_orders", :force => true do |t|
@@ -275,6 +315,14 @@ ActiveRecord::Schema.define(:version => 20121123020937) do
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
     t.integer  "task_id"
+    t.string   "purchase_order"
+    t.string   "instructions"
+    t.string   "building"
+    t.string   "contact"
+    t.string   "technical_notes"
+    t.integer  "building_id"
+    t.string   "job_number"
+    t.string   "invoice_number"
   end
 
 end
