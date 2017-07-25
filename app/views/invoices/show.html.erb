@@ -222,11 +222,11 @@
     <% if @invoice.paid.blank? %>
         <li class="edit"><%= link_to (t "global.edit"), edit_invoice_path if can? :edit, Invoice  %></li>
     <% end %>
-    <li class="print"><%= link_to (t "global.print"), invoice_path(@invoice.id) if can? :read, Invoice %></li>
+    <!--<li class="print"><%= link_to (t "global.print"), invoice_path(@invoice.id) if can? :read, Invoice %></li>-->
     <hr>
     <li class="delete"><%= link_to (t "global.delete"), invoice_path, :confirm => 'Are you sure?', :method => :delete  if can? :manage, Invoice %> </li>
     <hr>
-    <li class="exit"><%= link_to (t "global.exit"), invoices_path if can? :read, Invoice %></li>
+    <li class="exit"><%= link_to (t "global.exit_invoice"), invoices_path if can? :read, Invoice %></li>
   </ul>
   <p>Created <%= l @invoice.created_at, :format => :short %> <%= t "global.by" %> <%= @invoice.created_by %></p>
   <p>Updated <%= time_ago_in_words @invoice.updated_at %> <%= t "global.ago" %> <%= t "global.by" %> <%= @invoice.updated_by if present? %><%= @invoice.created_by if @invoice.updated_by.blank? %></p>

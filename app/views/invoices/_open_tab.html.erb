@@ -33,7 +33,7 @@
              <% if can? :manage, Invoice %>
                 <%= link_to(image_tag('printer.png', :title => (t('global.print'))), invoice_path(open.id,:format => 'pdf'))%>&nbsp;
                 <%= link_to(image_tag('delete.png', :title => (t('global.delete'))), invoice_path(open.id), :confirm => t('alert.destroy'), :method => :delete ) %>&nbsp;
-          <% end %>
+             <% end %>
         </td>
       </tr>
     <% end %>
