@@ -23,5 +23,5 @@ If you are interested in this product for setup, please contact me and I will he
 
 MyITCRM3 is a Open Source and Free Web Program written in Ruby/Rails. It's released under the GNU GPL3 Software License.
 
-If you like this program, please visit our website and help support it by making a donation (any amount) to help the ongoing development of MyIT CRM.
+
 
