@@ -64,9 +64,9 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to t("navbar.business_settings"), settings_path if can? :view, Setting %></li>
-		<li><%= link_to t("navbar.company_settings"), companies_path if can? :view, Setting %> </li>
+		<!--<li><%#= link_to t("navbar.company_settings"), companies_path if can? :view, Setting %> </li>-->
                 <li><%= link_to t("navbar.service_rates"), service_rates_path if can? :view, ServiceRate %></li>
-                <!--<li><%#= link_to t("navbar.product_list"), products_path if can? :view, Product %></li>-->
+                <li><%= link_to t("navbar.product_list"), products_path if can? :view, Product %></li>
                 <li><%= link_to t("navbar.priority_list"), priority_lists_path if can? :view, PriorityList %></li>
                 <li><%= link_to t("navbar.permissions"), permissions_path if can? :view, Permission %></li>
                 <li><%= link_to t("navbar.roles"), roles_path if can? :view, Role %></li>
