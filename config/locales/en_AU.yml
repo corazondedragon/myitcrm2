@@ -1,646 +1,682 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en_AU:
-  will_paginate:
-    previous_label: "Previous"
-    next_label: "Next"
-  simple_form:
-    "yes": 'Yes'
-    "no": 'No'
-    required:
-      text: 'Required Field'
-#      mark: /images/exclamation.png
-      # You can uncomment the line below if you need to overwrite the whole required html.
-      # When using html, text and mark won't be used.
-#      html: '<abbr title="Required"><img height="8" src="/images/required_symbol.png" alt="Required Field"></abbr>'
-      html: '<abbr title="Required">*</abbr>'
-    error_notification:
-      default_message: "There were some errors reported in your submission. Please check that all information is correct."
-#      login_error: "Username and/or Password are incorrect"
-    # Labels and hints examples
-    # labels:
-    #   password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail para efetuar o sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   username: 'User name to sign in.'
-    #   password: 'No special characters, please.'
-     
-  global:
-    program_name: "MyIT CRM"
-    create: "Create"
-    delete: "Delete"
-    back: "Back"
-    edit: "Edit"
-    new: "New"
-    view: "View"
-    address: "Address"
-    state: "State"
-    city: "City"
-    zip: "Postcode"
-    phone: "Phone"
-    fax: "Fax"
-    email: "Email"
-    home: "Home"
-    submit: "Submit"
-    login: "Sign in"
-    logout: "Logout"
-    role: "Role"
-    restricted: "You don't have permission to view this section or Your session has expired."
-    active: "Active?"
-    user_type: "User Type"
-    welcome: "Welcome"
-    register: "Register"
-    last_updated_by: "Last updated by"
-    status: "Status"
-    roles_mask: "Role Mask"
-    cancel: "Cancel"
-    dashboard: "Dashboard"
-    mobile: "Mobile"
-    notes: "Notes"
-    updated_at: "Last Updated"
-    created_at: "Created"
-    ago: "ago"
-    from: "from"
-    by: "by"
-    or: "or"
-    confirm: "Confirm"
-    actions: "Actions"
-    close: "Mark as Completed"
-    my_details: "Edit My Profile"
-    days: "Day(s)"
-    months: "Month(s)"
-    years: "Year(s)"
-    administration: "Administration"
-    error: "Please re-check your information before proceeding"
-    description: "Description"
-    expired_session: "Your session has expired. Please log back in."
-    apply: "Apply"
-    workorder: "Work Orders"
-    print: "Print"
-    activity_log: "Activity Log"
-    exit: "Exit"
-    subject: "Subject"
-    access_denied: "You are not authorized to perform this action.This request has been logged."
-    tab:
-      notes: "Notes"
-    welcome_back: "Welcome back,"
-    disabled: "Disabled"
-    change: "Change"
-    filter: "Apply Filter"
-    required: "Required"
-    contact_numbers: "Contact Numbers"
-    special: "Office Use"
-    filters: "Filters"
-    quick_links: "Quick Links"
-    clients: "Client's"
-    client: "Client's Name"
-    created_by: "Created by"
-    cancel_account: "Cancel Account"
-    module:
-      contact_us: "Contact Us"
-      menu: "Menu"
-    wiki: "wiki"
-    index: "List"
-    invoice: "Invoice"
-    priority_list: "Work Order Priority List"
-    edit_priority_list: "Editing Priority list "
-    priority_name: "Priority List Name"
-    not_logged_in: "You must first log in or sign up before accessing this page."
-    username: "Username"
-    password: "Password"
-    invoices: "Invoices"
-    currently_active: "Active"
-    employees: "Employees"
-    transaction_log: "Transaction Log"
-    edited: "Edited"
-    and: "and"
-    closed: "Closed details"
-    permission: "Permission"
-    editing: "Editing"
-    wrote: "wrote"
-    additional: "Additional"
-    markdown_heading: "Use Markdown for formatting."
-    markdown_examples: "See examples."
-    for: "for"
-    due_date: "Due Date"
-  supplier:
-   t_title: "Supplier's"
-   t_new: "New Supplier"
-   t_view: "View Supplier "
-   t_edit: "Edit Supplier "
-   t_add_new_supplier: "Add New Supplier"
-   company_name: "Company Name"
-   address: "Address"
-   state: "State"
-   city: "City"
-   zip: "Postcode"
-   phone: "Phone"
-   fax: "Fax"
-   email: "Email"
-   credit_terms: "Credit Terms"
-   contact_name: "Contact Name"
-   contact_phone: "Contact Phone"
-   notes: "Notes"
-   active: "Active ?"
-   date_created: "Date Created"
-   date_updated: "Date Updated"
-   leadtime: "Delivery Lead-time (Days)"
-   flash_create_good: "Supplier was successfully created."
-   flash_update_good: "Supplier was successfully updated."
-   actions: "Actions"
-
-   credit_amount: "Credit Amount"
-   t_log: "Supplier Log"
-   supplier: "Supplier"
-   our_sku: "SKU"
-   _sku: "Supplier SKU"
-   supplier_sku: "Supplier SKU"
-   tab:
-     other: "Other"
-     basic: "Basic"
-   website: "Website"
-  user:
-     t_new_user: "New User Registration"
-     username: "Username"
-     password: "Password"
-     password_confirmation: "Password Confirmation"
-     flash_new_success: "Successfully Created New User"
-     t_edit_user: "Edit User Information"
-     t_update_user: "Update User Information"
-     flash_update_user: "Successfully Updated Profile."
-     login_success: "Successfully Logged in!."
-     logout_success: "Successfully Logged out."
-     t_title: "Users"
-     user_t_edit_user: "Editing User Profile"
-     t_view: "Users Details"
-     t_delete_user: "Delete User"
-     flash_delete_user: "Successfully Deleted User"
-     number: "ID"
-     active: "Active?"
-     list_users: "List of Users"
-     edit_profile: "Edit My Details"
-     add_new_user: "Create New User"
-     search: "By Full Name"
-     name: "Full Name"
-     name_eg: "eg: John Smith"
-     t_log: "User Log"
-     account_accessed: "User last Logged in"
-     not_logged_in_yet: "User has not logged in yet."
-     login_failures: "Failed Login Attempts"
-     login_count: "Successful Login's"
-     email: "Email"
-     address: "Address"
-     employed: "User is an Employee:"
-     hint:
-       employed: "Is this user a Employee?"
-       client: "Is this user a Client?."
-       assignable: "Can this user be assigned Work Order Requests? Default is No."
-     client: "Client/Customer?"
-     assignable: "Assignable to Work Orders?"
-     t_clients: "Clients"
-     search_by_role: "By Role"
-     search_by_phone: "By Phone"
-     active_wo: "Active WO's"
-     msg:
-       cancel_account: "Please call us to have you account deactivated."
-     cancel_account_button: "Cancel Account"
-     t_employees: "Employee's"
-     login_incorrect: "Username and/or Password incorrect. Please try again."
-     t_users_account: "Users"
-  user_t_edit_user: "Edit User"
-  role:
-    admin: "Administrator"
-    manager: "Manager"
-    technician: "Technician"
-    guest: "Guest"
-    client: "Client"
-    accounts: "Accounts"
-    t_new: "Add New Role"
-    t_view: "Roles List"
-    t_title: "Current Roles"
-    action: "Action?"
-    t_name: "Role Type"
-    id: "Role #"
-    clerk: "Clerk"
-    tab:
-      basic: "Basic Role Info"
-      permissions: "Permissions"
-  date:
-    order:
-     -  :day
-     -  :month
-     -  :year
-    formats:
-      # Use the strftime parameters for formats.
-      # When no format has been given, it uses default.
-      # You can provide other formats here if you like!
-#      Format meaning:
-#
-#        %a - The abbreviated weekday name (``Sun'')
-#        %A - The  full  weekday  name (``Sunday'')
-#        %b - The abbreviated month name (``Jan'')
-#        %B - The  full  month  name (``January'')
-#        %c - The preferred local date and time representation
-#        %d - Day of the month (01..31)
-#        %H - Hour of the day, 24-hour clock (00..23)
-#        %I - Hour of the day, 12-hour clock (01..12)
-#        %j - Day of the year (001..366)
-#        %m - Month of the year (01..12)
-#        %M - Minute of the hour (00..59)
-#        %p - Meridian indicator (``AM''  or  ``PM'')
-#        %S - Second of the minute (00..60)
-#        %U - Week  number  of the current year,
-#                starting with the first Sunday as the first
-#                day of the first week (00..53)
-#        %W - Week  number  of the current year,
-#                starting with the first Monday as the first
-#                day of the first week (00..53)
-#        %w - Day of the week (Sunday is 0, 0..6)
-#        %x - Preferred representation for the date alone, no time
-#        %X - Preferred representation for the time alone, no date
-#        %y - Year without a century (00..99)
-#        %Y - Year with century
-#        %Z - Time zone name
-#        %% - Literal ``%'' character
-#
-#         t = Time.now
-#         t.strftime("Printed on %m/%d/%Y")   #=> "Printed on 04/09/2003"
-#         t.strftime("at %I:%M%p")            #=> "at 08:56AM"
-
-      default: "%d/%m/%Y"
-      short: "%d/%m/%y"
-      long: "%B %d %Y"
-    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
-    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
-    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
-    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
-
-
-  time:
-    formats:
-      default: "%a, %d %b %Y %H:%M:%S"
-      short: "%d/%m/%Y"
-      medium: "%d/%m/%Y at %I:%M %p"
-      long: "%B %d, %Y %H:%M"
-    am: "AM"
-    pm: "PM"
-  number:
-    # Used in number_with_delimiter()
-    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
-    format:
-      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
-      separator: "."
-      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
-      delimiter: ","
-      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
-      precision: 2
-
-    # Used in number_to_currency()
-    currency:
-      format:
-        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
-        format: "%u%n"
-        unit: "$"
-        # These three are to override number.format and are optional
-        separator: "."
-        delimiter: ","
-        precision: 2
-
-    # Used in number_to_percentage()
-    percentage:
-      format:
-        # These three are to override number.format and are optional
-        # separator:
-        delimiter: ""
-        precision: 1
-
-    # Used in number_to_precision()
-    precision:
-      format:
-        # These three are to override number.format and are optional
-        # separator:
-        delimiter: ""
-        # precision:
-
-    # Used in number_to_human_size()
-    human:
-      format:
-        # These three are to override number.format and are optional
-        # separator:
-        delimiter: ""
-        precision: 1
-      storage_units:
-        # Storage units output formatting.
-        # %u is the storage unit, %n is the number (default: 2 MB)
-        format: "%n %u"
-        units:
-          byte:
-            one:   "Byte"
-            other: "Bytes"
-          kb: "KB"
-          mb: "MB"
-          gb: "GB"
-          tb: "TB"
-
-  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
-  datetime:
-    distance_in_words:
-      half_a_minute: "half a minute"
-      less_than_x_seconds:
-        one:   "less than 1 second"
-        other: "less than %{count} seconds"
-      x_seconds:
-        one:   "1 second"
-        other: "%{count} seconds"
-      less_than_x_minutes:
-        one:   "less than a minute"
-        other: "less than %{count} minutes"
-      x_minutes:
-        one:   "1 minute"
-        other: "%{count} minutes"
-      about_x_hours:
-        one:   "about 1 hour"
-        other: "about %{count} hours"
-      x_days:
-        one:   "1 day"
-        other: "%{count} days"
-      about_x_months:
-        one:   "about 1 month"
-        other: "about %{count} months"
-      x_months:
-        one:   "1 month"
-        other: "%{count} months"
-      about_x_years:
-        one:   "about 1 year ago"
-        other: "about %{count} years"
-      over_x_years:
-        one:   "over 1 year"
-        other: "over %{count} years"
-    prompts:
-      year:   "Year"
-      month:  "Month"
-      day:    "Day"
-      hour:   "Hour"
-      minute: "Minute"
-      second: "Seconds"
-  activerecord:
-    errors:
-      messages:
-        inclusion: "is not included in the list"
-        exclusion: "is reserved"
-        invalid: "is invalid"
-        confirmation: "doesn't match confirmation"
+--- 
+en_AU: 
+  ROLES: "%w[administrator manager technician accountant assistant client]"
+  _business_state: State
+  activerecord: 
+    errors: 
+      messages: 
         accepted: "must be accepted"
-        empty: "can't be empty"
         blank: "can't be blank"
+        circular_dependency: "This relation would create a circular dependency"
+        confirmation: "doesn't match confirmation"
+        empty: "can't be empty"
+        equal_to: "must be equal to %{count}"
+        even: "must be even"
+        exclusion: "is reserved"
+        greater_than: "must be greater than %{count}"
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        greater_than_start_date: "must be greater than start date"
+        inclusion: "is not included in the list"
+        invalid: "is invalid"
+        less_than: "must be less than %{count}"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        not_a_date: "is not a valid date"
+        not_a_number: "is not a number"
+        not_same_project: "doesn't belong to the same project"
+        odd: "must be odd"
+        record_invalid: "Validation failed: %{errors}"
+        taken: "has already been taken"
         too_long: "is too long (maximum is %{count} characters)"
         too_short: "is too short (minimum is %{count} characters)"
         wrong_length: "is the wrong length (should be %{count} characters)"
-        taken: "has already been taken"
-        not_a_number: "is not a number"
-        not_a_date: "is not a valid date"
-        greater_than: "must be greater than %{count}"
-        greater_than_or_equal_to: "must be greater than or equal to %{count}"
-        equal_to: "must be equal to %{count}"
-        less_than: "must be less than %{count}"
-        less_than_or_equal_to: "must be less than or equal to %{count}"
-        odd: "must be odd"
-        even: "must be even"
-        greater_than_start_date: "must be greater than start date"
-        not_same_project: "doesn't belong to the same project"
-        circular_dependency: "This relation would create a circular dependency"
-        record_invalid: "Validation failed: %{errors}"
-      template:
-        header:
-          one:    "1 error prohibited this {%{model} from being saved"
-          other:  "%{count} errors prohibited this %{model} from being saved"
-        # The variable :count is also available
+      template: 
         body: "There were problems with your submission. Please review."
-  support:
-    select:
-      # default value for :prompt => true in FormOptionsHelper
-      prompt: "Please select"
-    array:
-      sentence_connector: ","
-      two_words_connector: " and "
-      skip_last_comma: false
-      words_connector: " and "
-      last_word_connector: " and "
-
-  products:
-    hint_desc: "eg: SATA 500 GB Hard Drive"
-    hint_model: "eg: WD5000S"
-    hint_manuf: "eg: Western Digital"
-    manufacturer: "Manufacturer"
-    t_title: "Products"
-    t_add_new: "Add New Product"
-    hint_tax_rate: "Tax as a %. eg; 10 would be 10%"
-    cost: "Cost Price"
-    sell: "Sell Price"
-    qoh: "QOH"
-    allocated: "Allocated"
-    available: "Avail."
-    ordered: "Ordered"
-    search: "Search Description for "
-    stocked: "Enable this if stock needs to be in controlled"
-    tab_menu_basic: "Basic (required)"
-    tab_menu_basic_name: "Basic"
-    tab_menu_inventory_name: "Inventory"
-    tab_menu_selling_name: "Selling_Information"
-    tab_menu_selling: "Selling Information"
-    tab_menu_warranty_name: "Warranty_Information"
-    tab_menu_warranty: "Warranty Information"
-    our_sku: "Our SKU#"
-    category: "Category"
-    supplier: "Supplier"
-    supplier_sku: "Supplier SKU#"
-    cost_price: "Purchase/Cost Price"
-    sell_price: "Selling Price"
-    hint:
-      category: "Simply start typing to select from an existing Category, if no category exists it will automatically create a new one for you."
-      our_sku: "aka : Product Number, Part Number, Item Number, etc"
-      stocking_qty: "Stock Qty to keep."
-    model: "Model #"
-    stocking_qty: "Stocking Qty"
-    tax_rate: "Tax Rate"
-    discountable: "Is Discountable?"
-    disc_amount: "Discount Amount"
-    disc_percent: "Discount Percentage"
-    warranty_info: "Warranty Information"
-    warranty_length: "Warranty Cover Length"
-    warranty_units: "Warranty Length Units"
-    t_log: "Product Log"
-  product_cat:
-    t_new_category: "New Product Category"
-    t_create_new_category: "Create New Product Category"
-    t_list: "Category List"
-  settings:
-    t_title: "Business Settings"
-    bank_number: "eg: BSB number"
-    tab:
-      payment_options_url: "Payment_Options"
-      payment_options: "Payment Options"
-      billing_information: "Billing Information"
-      billing_information_url: "Billing_Information"
-      localisation_url: "Localisation"
-      priority_fields_url: "Priority_Values"
-      priority_fields_options: "Priority Values"
-      taxation_info: "Taxation_Information"
-      taxation_information: "Taxation Information"
-      misc_url: "Misc"
-      misc: "Misc"
-      invoice_defaults_url: "Invoice_Defaults"
-      invoice_defaults: "Invoice Defaults"
-    hint:
-      business_number: "eg: ACN, ABN, etc"
-      transaction_fee: "eg: 3% of total invoice amount"
-      tax_format: "eg:To include 10% on your invoices, enter 10"
-      tax_type: "eg: GST, VAT, Sales, etc"
-
-    flash:
-      updated_successfully: "Sucessfully updated settings."
-  user_t_edit_profile: "Edit My Profile"
-  
-  users:
-    tab:
-      user_type: "User Role"
-      user_type_url: "Users_Role"
-      contact_info: "Contact Information"
-      permissions: "Permissions"
-      attributes: "Attributes"
-      address_info: "Address Info"
-      notes: "Notes"
-      log: "Log"
-      details: "Details"
-  product:
-    taxable: "Is Taxable?"
-    new: "Create New Product"
-  status:
-    new: "New"
-  workorder:
-    tab_menu_basic_name: "Work_Order_Information"
-    tab_menu_basic: "Work Order Information"
-    subject: "Brief Description"
-    details: "Details"
-    priority: "Priority"
-    tab_menu_resolution: "Resolution"
-    resolution: "Resolution Details"
-    t_add_new: "Create"
-    status: "Status"
-    t_closed: "Closed Work Orders"
-    t_workorders: "Work Orders"
-    tab_menu_new: "New"
-
-
-    tab_menu_assigned: "Assigned"
-    tab_menu_on_hold: "On Hold"
-    tab_menu_closed: "Closed"
-    assigned_to: "Assigned to"
-    not_assigned_message: "Has not been assigned yet."
-    t_log: "Work Order Log"
-    t_viewing_workorder_details: "Viewing Work Order Details"
-    t_edit: "Editing Work Order"
-    closed: "Is Work Order closed?"
-    hint:
-      re_open: "Use this to re-open the Works Order"
-    message_close_confirmation: "Are you sure you want to close this Work Order?"
-    joins:
-      closed: "Closed by"
-      at: "on the"
-    t_printing_workorder_details: "Work Order Print"
-    print:
-      title: "Work Order"
-    pdf:
-      t_workorder: "Work Order"
-      client: "Name :"
-      t_customer_details: "Customer Details"
-    message_assigned_success: "Work Order Assigned Successfully!"
-    creating_wo_for: "New Work Order for "
-    tab_menu_pending: "Pending"
-    index:
-      t_wo: "WO #"
-    tab_menu_re_opened: "Re-Opened"
-    reply_posted_by: "Posted by"
-    message_author: "Author"
-    messages: "Messages"
-  setting_business_name: "Business Names"
-  business_slogan: "Business Slogan"
-  business_number: "Business Number"
-  business_email: "Primary Email"
-  business_phone: "Phone Number"
-  business_toll_free: "Toll Free Number"
-  business_mobile: "Mobile Number"
-  business_fax: "Fax Number"
-  business_address: "Address"
-  business_city: "City"
-  _business_state: "State"
-  business_zip: "Postcode"
-  enable_tax: "Enable Tax"
-  tax_rate: "Tax rate %"
-  tax_type: "Tax Type"
-  logout_limit: "Logout after inactivity enabled"
-  version: "MyITCRM Version"
-  business_contact_name: "Head Office Contact Name"
-  business_contact_phone: "Head Office Contact Number"
-  business_contact_email: "Head Office Contact Email"
+        header: 
+          one: "1 error prohibited this {%{model} from being saved"
+          other: "%{count} errors prohibited this %{model} from being saved"
+  alert: 
+    destroy: "Are you sure you want to Delete this record?"
   billing_address: "Head Office Address"
   billing_city: "Head Office City"
-  billing_zip: "Head Office Postcode"
-  billing_state: "Head Office State"
-  billing_phone: "Head Office Phone"
   billing_fax: "Head Office Fax"
+  billing_phone: "Head Office Phone"
+  billing_state: "Head Office State"
+  billing_zip: "Head Office Postcode"
+  building: 
+    address: Address
+    description: Description
+    edit_building: "Edit building #"
+    edit_tab_title: "Building edit"
+    index_building: Buildings
+    information: "Building information"
+    name: Name
+    new_building: "New building"
+    new_tab_title: "Building new"
+    tab_menu_existing: "Current buildings"
+  business_address: Address
+  business_city: City
+  business_contact_email: "Head Office Contact Email"
+  business_contact_name: "Head Office Contact Name"
+  business_contact_phone: "Head Office Contact Number"
+  business_email: "Primary Email"
+  business_fax: "Fax Number"
+  business_mobile: "Mobile Number"
+  business_number: "Business Number"
+  business_phone: "Phone Number"
+  business_slogan: "Business Slogan"
+  business_toll_free: "Toll Free Number"
+  business_zip: Postcode
+  date: 
+    abbr_day_names: 
+      - Sun
+      - Mon
+      - Tue
+      - Wed
+      - Thu
+      - Fri
+      - Sat
+    abbr_month_names: 
+      - ~
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+    day_names: 
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+    formats: 
+      default: "%d/%m/%Y"
+      long: "%B %d %Y"
+      short: "%d/%m/%y"
+    month_names: 
+      - ~
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+    order: 
+      - !ruby/symbol day
+      - !ruby/symbol month
+      - !ruby/symbol year
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        one: "about 1 hour"
+        other: "about %{count} hours"
+      about_x_months: 
+        one: "about 1 month"
+        other: "about %{count} months"
+      about_x_years: 
+        one: "about 1 year ago"
+        other: "about %{count} years"
+      half_a_minute: "half a minute"
+      less_than_x_minutes: 
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      less_than_x_seconds: 
+        one: "less than 1 second"
+        other: "less than %{count} seconds"
+      over_x_years: 
+        one: "over 1 year"
+        other: "over %{count} years"
+      x_days: 
+        one: "1 day"
+        other: "%{count} days"
+      x_minutes: 
+        one: "1 minute"
+        other: "%{count} minutes"
+      x_months: 
+        one: "1 month"
+        other: "%{count} months"
+      x_seconds: 
+        one: "1 second"
+        other: "%{count} seconds"
+    prompts: 
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
+  email: 
+    building: Building
+    closed: "A work order has been closed by"
+    contact_person: "Contact person and phone"
+    description: Description
+    from: from
+    id: "Workorder ID"
+    instructions: Instructions
+    no_email: "There is no email to reply to for this notification."
+    notes: "Technical notes"
+    priority: Priority
+    purchase_order: "Purchase order"
+    reply: "Reply to send an email to"
+    service_request: "A service request has been made by"
+    status: Status
+    subject: Subject
+    submitted_by: "Request submitted by"
+    update: "A service request has been updated by"
+    updated_by: "Updated by"
   enable_bill_to: "Enable Separate Bill To Details"
-  naviagtion:
-    users: "Users"
-  setting_details: "Business Details"
-  page:
-    posted_in: "Posted in"
-    under: "under"
-    created_at: "Created "
-  alert:
-    destroy: "Are you sure you want to Delete this record?"
-  reply:
-    message: "Message"
-    internal: "Internal Reply"
-    internal_hint: "These replies marked as 'Internal' will not been seen by the client"
-    notice:
-      successful: "Reply was added to Work Order Successfully"
-      updated: "Reply was updated successfully."
-  login:
-    new_user_account: "New User? Register here."
-  invoice:
-    show: "Show Invoice"
-    create: "Create Invoice"
+  enable_tax: "Enable Tax"
+  global: 
+    access_denied: "You are not authorized to perform this action.This request has been logged."
+    actions: Actions
+    active: Active?
+    activity_log: "Activity Log"
+    additional: Additional
+    address: Address
+    administration: Administration
+    ago: ago
+    and: and
+    apply: Apply
+    back: Back
+    building: "Building name"
+    by: by
+    cancel: Cancel
+    cancel_account: "Cancel Account"
+    change: Change
+    city: City
+    client: "Client's Name"
+    client_list: "Client List"
+    clients: Client's
+    close: Close
+    closed: "Closed details"
+    confirm: Confirm
+    contact_numbers: "Contact Numbers"
+    create: Create
+    created_at: Created
+    created_by: "Created by"
+    currently_active: Active
+    dashboard: Dashboard
+    days: Day(s)
+    delete: Delete
+    description: Description
+    disabled: Disabled
+    due_date: "Due Date"
+    edit: Edit
+    edit_priority_list: "Editing Priority list "
+    edited: Edited
+    editing: Editing
+    email: Email
+    employees: Employees
+    error: "Please re-check your information before proceeding"
+    exit: Exit
+    exit_invoice: "Back to Invoices"
+    expired_session: "Your session has expired. Please log back in."
+    fax: Fax
+    filter: "Apply Filter"
+    filters: Filters
+    for: for
+    from: from
+    go_to: "Go to:"
+    home: Home
+    index: List
+    instructions: "Special instructions"
+    invoice: Invoice
+    invoices: Invoices
+    last_updated_by: "Last updated by"
+    login: "Sign in"
+    logout: Logout
+    mark_as_completed: "Mark as Completed"
+    markdown_examples: "See examples."
+    markdown_heading: "You can format your text using special characters."
+    mobile: Mobile
+    module: 
+      contact_us: "Contact Us"
+      menu: Menu
+    months: Month(s)
+    my_details: "Edit My Profile"
+    new: New
+    not_logged_in: "You must first log in or sign up before accessing this page."
+    notes: Notes
+    or: or
+    password: Password
+    permission: Permission
+    phone: Phone
+    print: Print
+    priority_list: "Work Order Priority List"
+    priority_name: "Priority List Name"
+    program_name: "MyIT CRM"
+    purchase_order: "Purchase order #"
+    quick_links: "Quick Links"
+    register: Register
+    required: Required
+    restricted: "You don't have permission to view this section or Your session has expired."
+    role: Role
+    roles_mask: "Role Mask"
+    special: "Office Use"
+    state: State
+    status: Status
+    subject: Subject
+    submit: Submit
+    tab: 
+      notes: Notes
+    technical_notes: "Tech notes"
+    transaction_log: "Transaction Log"
+    updated_at: "Last Updated"
+    user_type: "User Type"
+    username: Username
+    view: View
+    welcome: Welcome
+    welcome_back: "Welcome back,"
+    wiki: wiki
+    workorder: "Work Orders"
+    wrote: wrote
+    years: Year(s)
+    zip: Postcode
+  invoice: 
+    add_new_line: "Add a New Line"
     billing_account: "Account ID:"
     billing_name: "Bill To:"
-    add_new_line: "Add a New Line"
-    paid: "PAID"
-    overdue: "OVERDUE"
-    unpaid: "UNPAID"
-    invoice_id: "Invoice #"
     clients_name: "Clients Name"
-    wo_id: "WO #"
+    create: "Create Invoice"
+    invoice_id: "Invoice #"
+    note: "Invoice Note"
+    overdue: OVERDUE
+    paid: PAID
+    show: "Show Invoice"
     sub_total: "Sub Total"
     tax_total: "Tax Total"
     total: "Invoice Total"
-    note: "Invoice Note"
-  invoices:
+    unpaid: UNPAID
+    wo_id: "WO #"
+  invoices: 
     tab_menu_open: "Unpaid Invoices"
     tab_menu_paid: "Paid Invoices"
-  ROLES: "%w[administrator manager technician accountant assistant client]"
-  navbar:
-    new_work_order: "New Work Order"
-  permission:
-    module_class: "Module/Class"
-    action_type: "Action Type"
-  seeds:
-    role:
-      super: "Super User"
-  message:
-    info:
+  login: 
+    new_user_account: "New User? Register here."
+  logout_limit: "Logout after inactivity enabled"
+  message: 
+    info: 
       select_client_first: "Please select a client first."
+  navbar: 
+    building_list: "All buildings"
+    business_settings: "Business Settings"
+    clients: Clients
+    company_settings: "Company Settings"
+    create_new: "Create New"
+    edit_buildings: "Edit Buildings"
+    employees: Employees
+    list_all: "List All"
+    my_account: "My Account"
+    new_building: "New Building"
+    new_invoice: "New Invoice"
+    new_work_order: "New Work Order"
+    permissions: Permissions
+    priority_list: "Priority List"
+    product_list: "Product List"
+    roles: Roles
+    service_rates: "Service Rates"
+  naviagtion: 
+    users: Users
+  number: 
+    currency: 
+      format: 
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        unit: $
+    format: 
+      delimiter: ","
+      precision: 2
+      separator: "."
+    human: 
+      format: 
+        delimiter: ""
+        precision: 1
+      storage_units: 
+        format: "%n %u"
+        units: 
+          byte: 
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage: 
+      format: 
+        delimiter: ""
+        precision: 1
+    precision: 
+      format: 
+        delimiter: ""
+  page: 
+    created_at: "Created "
+    posted_in: "Posted in"
+    under: under
+  permission: 
+    action_type: "Action Type"
+    module_class: Module/Class
+  product: 
+    new: "Create New Product"
+    taxable: "Is Taxable?"
+  product_cat: 
+    t_create_new_category: "Create New Product Category"
+    t_list: "Category List"
+    t_new_category: "New Product Category"
+  products: 
+    allocated: Allocated
+    available: Avail.
+    category: Category
+    cost: "Cost Price"
+    cost_price: "Purchase/Cost Price"
+    disc_amount: "Discount Amount"
+    disc_percent: "Discount Percentage"
+    discountable: "Is Discountable?"
+    hint: 
+      category: "Simply start typing to select from an existing Category, if no category exists it will automatically create a new one for you."
+      our_sku: "aka : Product Number, Part Number, Item Number, etc"
+      stocking_qty: "Stock Qty to keep."
+    hint_desc: "eg: SATA 500 GB Hard Drive"
+    hint_manuf: "eg: Western Digital"
+    hint_model: "eg: WD5000S"
+    hint_tax_rate: "Tax as a %. eg; 10 would be 10%"
+    mark_up: "Mark-up"
+    manufacturer: Manufacturer
+    model: "Model #"
+    ordered: Ordered
+    our_sku: "Our SKU#"
+    qoh: "Quantity on hand"
+    qty_on_hand: "Quantity on hand"
+    qty_allocated: "Quantity allocated"
+    qty_available: "Quantity available"
+    qty_ordered: "Quantity ordered"
+    search: "Search Description for "
+    sell: "Sell Price"
+    sell_price: "Selling Price"
+    stocked: "Enable this if stock needs to be in controlled"
+    stocked_product: "Stocked?"
+    stocking_qty: "Stocking Qty"
+    supplier: Supplier
+    supplier_sku: "Supplier SKU#"
+    t_add_new: "Add New Product"
+    t_log: "Product Log"
+    t_title: Products
+    taxable: "Taxable?"
+    tab_menu_basic: "Basic (required)"
+    tab_menu_basic_name: Basic
+    tab_menu_inventory_name: Inventory
+    tab_menu_selling: "Selling Information"
+    tab_menu_selling_name: Selling_Information
+    tab_menu_warranty: "Warranty Information"
+    tab_menu_warranty_name: Warranty_Information
+    tax_rate: "Tax Rate"
+    warranty_info: "Warranty Information"
+    warranty_length: "Warranty Cover Length"
+    warranty_units: "Warranty Length Units"
+    weight: Weight
+  rates: 
+    adding_new_part_rate: "Adding New Part Rate"
+    adding_new_service_rate: "Adding New Service Rate"
+    creating_new_part_rate: "Creating New Part Rate"
+    creating_new_service_rate: "Creating New Service Rate"
+    editing_part_rate: "Editing Part Rate"
+    editing_service_rate: "Editing Service Rate"
+    part_rate_details: "Part Rate Details"
+    part_rates: "Part Rates"
+    service_rate_details: "Service Rate Details"
+    service_rates: "Service Rates"
+  reply: 
+    internal: "Internal Reply"
+    internal_hint: "These replies marked as 'Internal' will not been seen by the client"
+    message: Message
+    notice: 
+      successful: "Reply was added to Work Order Successfully"
+      updated: "Reply was updated successfully."
+  role: 
+    accounts: Accounts
+    action: Action?
+    admin: Administrator
+    clerk: Clerk
+    client: Client
+    guest: Guest
+    id: "Role #"
+    manager: Manager
+    t_name: "Role Type"
+    t_new: "Add New Role"
+    t_title: "Current Roles"
+    t_view: "Roles List"
+    tab: 
+      basic: "Basic Role Info"
+      permissions: Permissions
+    technician: Technician
+  seeds: 
+    role: 
+      super: "Super User"
+  setting_business_name: "Business Names"
+  setting_details: "Business Details"
+  settings: 
+    bank_number: "eg: BSB number"
+    flash: 
+      updated_successfully: "Sucessfully updated settings."
+      user_t_edit_profile: "Edit My Profile"
+    hint: 
+      business_number: "eg: ACN, ABN, etc"
+      tax_format: "eg:To include 10% on your invoices, enter 10"
+      tax_type: "eg: GST, VAT, Sales, etc"
+      transaction_fee: "eg: 3% of total invoice amount"
+    t_title: "Business Settings"
+    tab: 
+      billing_information: "Billing Information"
+      billing_information_url: Billing_Information
+      invoice_defaults: "Invoice Defaults"
+      invoice_defaults_url: Invoice_Defaults
+      localisation_url: Localisation
+      misc: Misc
+      misc_url: Misc
+      payment_options: "Payment Options"
+      payment_options_url: Payment_Options
+      priority_fields_options: "Priority Values"
+      priority_fields_url: Priority_Values
+      taxation_info: Taxation_Information
+      taxation_information: "Taxation Information"
+  simple_form: 
+    error_notification: 
+      default_message: "There were some errors reported in your submission. Please check that all information is correct."
+    ? "no"
+    : "No"
+    required: 
+      html: "<abbr title=\"Required\">*</abbr>"
+      text: "Required Field"
+    ? "yes"
+    : "Yes"
+  status: 
+    new: New
+  supplier: 
+    _sku: "Supplier SKU"
+    actions: Actions
+    active: "Active ?"
+    address: Address
+    city: City
+    company_name: "Company Name"
+    contact_name: "Contact Name"
+    contact_phone: "Contact Phone"
+    credit_amount: "Credit Amount"
+    credit_terms: "Credit Terms"
+    date_created: "Date Created"
+    date_updated: "Date Updated"
+    email: Email
+    fax: Fax
+    flash_create_good: "Supplier was successfully created."
+    flash_update_good: "Supplier was successfully updated."
+    leadtime: "Delivery Lead-time (Days)"
+    notes: Notes
+    our_sku: SKU
+    phone: Phone
+    state: State
+    supplier: Supplier
+    supplier_sku: "Supplier SKU"
+    t_add_new_supplier: "Add New Supplier"
+    t_edit: "Edit Supplier "
+    t_log: "Supplier Log"
+    t_new: "New Supplier"
+    t_title: Supplier's
+    t_view: "View Supplier "
+    tab: 
+      basic: Basic
+      other: Other
+    website: Website
+    zip: Postcode
+  support: 
+    array: 
+      last_word_connector: " and "
+      sentence_connector: ","
+      skip_last_comma: false
+      two_words_connector: " and "
+      words_connector: " and "
+    select: 
+      prompt: "Please select"
+  tax_rate: "Tax rate %"
+  tax_type: "Tax Type"
+  time: 
+    am: AM
+    formats: 
+      default: "%a, %d %b %Y %H:%M:%S"
+      long: "%B %d, %Y %H:%M"
+      medium: "%d/%m/%Y at %I:%M %p"
+      short: "%d/%m/%Y"
+    pm: PM
+  user: 
+    account_accessed: "User last Logged in"
+    active: Active?
+    active_wo: "Active WO's"
+    add_new_user: "Create New User"
+    address: Address
+    assignable: "Assignable to Work Orders?"
+    cancel_account_button: "Cancel Account"
+    client: Client/Customer?
+    company_name: "Company name"
+    edit_profile: "Edit My Details"
+    email: Email
+    employed: "User is an Employee:"
+    flash_delete_user: "Successfully Deleted User"
+    flash_new_success: "Successfully Created New User"
+    flash_update_user: "Successfully Updated Profile."
+    hint: 
+      assignable: "Can this user be assigned Work Order Requests? Default is No."
+      client: "Is this user a Client?."
+      employed: "Is this user a Employee?"
+    list_users: "List of Users"
+    login_count: "Successful Login's"
+    login_failures: "Failed Login Attempts"
+    login_incorrect: "Username and/or Password incorrect. Please try again."
+    login_success: "Successfully Logged in!."
+    logout_success: "Successfully Logged out."
+    msg: 
+      cancel_account: "Please call us to have you account deactivated."
+    name: "Full Name"
+    name_eg: "eg: John Smith"
+    not_logged_in_yet: "User has not logged in yet."
+    number: ID
+    password: Password
+    password_confirmation: "Password Confirmation"
+    search: "By Full Name"
+    search_by_phone: "By Phone"
+    search_by_role: "By Role"
+    t_clients: Clients
+    t_delete_user: "Delete User"
+    t_edit_user: "Edit User Information"
+    t_employees: Employees
+    t_log: "User Log"
+    t_new_user: "New User Registration"
+    t_title: Users
+    t_update_user: "Update User Information"
+    t_users_account: Users
+    t_view: "Users Details"
+    user_t_edit_user: "Editing User Profile"
+    username: Username
+  user_t_edit_user: "Edit User"
+  users: 
+    tab: 
+      address_info: "Address Info"
+      attributes: Attributes
+      contact_info: "Contact Information"
+      details: Details
+      log: Log
+      notes: Notes
+      permissions: Permissions
+      user_type: "User Role"
+      user_type_url: Users_Role
+  version: "MyITCRM Version"
+  will_paginate: 
+    next_label: Next
+    previous_label: Previous
+  workorder: 
+    assigned: "This work order is assigned to "
+    assigned_to: "Assigned to"
+    building: Building
+    closed: "Is Work Order closed?"
+    contact: "Contact name/phone"
+    creating_wo_for: "New Work Order for "
+    details: Details
+    hint: 
+      re_open: "Use this to re-open the Works Order"
+    index: 
+      t_wo: "WO #"
+    instructions: Instructions
+    invoice_number: "Invoice number"
+    job_number: "Job number"
+    joins: 
+      at: "on the"
+      closed: "Closed by"
+    message_assigned_success: "Work Order Assigned Successfully!"
+    message_author: Author
+    message_close_confirmation: "Are you sure you want to close this Work Order?"
+    messages: Messages
+    not_assigned_message: "Has not been assigned yet."
+    pdf: 
+      client: "Name :"
+      t_customer_details: "Customer Details"
+      t_workorder: "Work Order"
+    print: 
+      title: "Work Order"
+    priority: Priority
+    purchase_order: "Purchase Order"
+    reply_posted_by: "Posted by"
+    resolution: "Resolution Details"
+    status: Status
+    subject: "Brief Description"
+    t_add_new: Create
+    t_closed: "Closed Work Orders"
+    t_edit: "Editing Work Order"
+    t_log: "Work Order Log"
+    t_printing_workorder_details: "Work Order Print"
+    t_viewing_workorder_details: "Viewing Work Order Details"
+    t_workorders: "Work Orders"
+    tab_menu_assigned: Assigned
+    tab_menu_basic: "Work Order Information"
+    tab_menu_basic_name: Work_Order_Information
+    tab_menu_closed: Closed
+    tab_menu_new: New
+    tab_menu_on_hold: "On Hold"
+    tab_menu_pending: Pending
+    tab_menu_re_opened: Re-Opened
+    tab_menu_resolution: Resolution
+    unassigned: "This work order is currently unassigned."
