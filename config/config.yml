@@ -12,16 +12,24 @@ business_mobile:
   default: '02 9999 8888'
 business_email:
   default: "admin@exmaple.com"
+technician_email:
+  default: "curt@ii-inc.ca"
+no_reply_email:
+  default: "noreply@ii-inc.ca"
+accountant_email:
+  default: "ross@ii-inc.ca"
+service_email:
+  default: "service@ii-inc.ca"
 business_address:
-  default: '49 Fake Road'
+  default: ''
 business_city:
-  default: 'Sydney'
+  default: 'Edmonton'
 business_state:
-  default: 'NSW'
+  default: 'Alberta'
 business_zip_code:
-  default: '2000'
+  default: ''
 business_country:
-  default: 'Australia'
+  default: 'Canada'
 business_number:
   default: ''
 meta_tags:

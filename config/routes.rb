@@ -1,5 +1,14 @@
 MyITCRM2::Application.routes.draw do
 
+  resources :companies
+
+
+  get "buildings/index"
+  get "buildings/edit"
+  get "building/index"
+  get "building/edit"
+  #get "buildings/new"
+
   resources :roles
   resources :permissions
   resources :permittables
@@ -10,10 +19,8 @@ MyITCRM2::Application.routes.draw do
       put :update_profile
       put :register
     end
-      resources :invoices, :work_orders
+      resources :invoices, :work_orders, :buildings
   end
-
-  resources :pages
   resources :page_categories do
     get :page_category_name, :on => :collection
   end
@@ -21,7 +28,7 @@ MyITCRM2::Application.routes.draw do
 
   resources :statuses
   resources :priority_lists
-
+  resources :buildings
 
   resources :work_orders do
     collection do
@@ -63,11 +70,9 @@ MyITCRM2::Application.routes.draw do
   match 'settings/edit' => 'settings#edit', :as => :edit
 
   match 'help/:page_id' => 'help#show'
-  get '*page_category/:id' => 'pages#show', :only => [:show]
 
 #  Ensure these are last in this list and before the root route
-
-  #resources :pages, :only => [:index, :new, :edit]
+#  resources :pages, only: [:index, :new, :create]
 #  resources :pages, path: "", except: [:index, :new, :create]
 
 #  map.root :register
